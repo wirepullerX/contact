@@ -68,7 +68,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:5000/contacts/getmany")
+      .get("https://git.heroku.com/sheltered-plateau-34648.git/contacts/getmany")
       .then((response) => {
         console.log(response.data);
         this.Users = response.data;
@@ -93,7 +93,7 @@ export default {
     },
     delUser(UserId) {
       axios
-        .delete("http://localhost:5000/contact/delete/" + UserId)
+        .delete("https://git.heroku.com/sheltered-plateau-34648.git/contact/delete/" + UserId)
         .then(() => {
           console.log("Delete userId: " + UserId);
         })

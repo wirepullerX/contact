@@ -82,7 +82,7 @@ export default {
                 facebook: this.User.facebook,
                 imageUrl: this.User.imageUrl
             }
-            axios.post('http://localhost:5000/contacts/update/'+this.$route.params.userId, newUser)
+            axios.post('https://git.heroku.com/sheltered-plateau-34648.git/contacts/update/'+this.$route.params.userId, newUser)
                 .then((response)=>{
                     console.log(response)
                 })
@@ -94,7 +94,7 @@ export default {
         }
     },
     mounted() {
-        axios.get('http://localhost:5000/contact/read/'+this.$route.params.userId)
+        axios.get('https://git.heroku.com/sheltered-plateau-34648.git/contact/read/'+this.$route.params.userId)
             .then((response)=>{
                 //console.log(response.data)
                 this.User = response.data
