@@ -82,7 +82,7 @@ export default {
                 facebook: this.User.facebook,
                 imageUrl: this.User.imageUrl
             }
-            axios.post('https://git.heroku.com/sheltered-plateau-34648.git/contacts/update/'+this.$route.params.userId, newUser)
+            axios.post('https://sheltered-plateau-34648.herokuapp.com/contacts/update/'+this.$route.params.userId, newUser)
                 .then((response)=>{
                     console.log(response)
                 })

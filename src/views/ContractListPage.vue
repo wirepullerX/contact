@@ -68,7 +68,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://git.heroku.com/sheltered-plateau-34648.git/contacts/getmany")
+      .get("https://sheltered-plateau-34648.herokuapp.com/contacts/getmany")
       .then((response) => {
         console.log(response.data);
         this.Users = response.data;
@@ -80,7 +80,7 @@ export default {
   computed: {
     filterUsers: function () {
       return this.Users.filter((user) => {
-        return user.firstName.match(this.search);
+        return user.firstName.match(this.search)||user.lastName.match(this.search);
       });
     },
   },
@@ -93,7 +93,7 @@ export default {
     },
     delUser(UserId) {
       axios
-        .delete("https://git.heroku.com/sheltered-plateau-34648.git/contact/delete/" + UserId)
+        .delete("https://sheltered-plateau-34648.herokuapp.com/contact/delete/" + UserId)
         .then(() => {
           console.log("Delete userId: " + UserId);
         })
