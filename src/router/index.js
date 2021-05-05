@@ -1,13 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Users from '../views/Users.vue'
-import About from '../views/About.vue'
 import AddUser from '../views/AddUser.vue'
-import TestBootstrap from '../views/TestBootstrap.vue'
 import LoginPage from '../views/LoginPage.vue'
 import ContractListPage from '../views/ContractListPage.vue'
 import EditPage from '../views/EditPage.vue'
-import Login from '../views/Login.vue'
 
 const routerHistory = createWebHistory()
 
