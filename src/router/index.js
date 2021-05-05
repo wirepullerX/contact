@@ -21,24 +21,9 @@ const routes = [
         redirect: '/loginpage'
     },
     {
-        path: '/users',
-        name: Users,
-        component: Users
-    },
-    {
-        path: '/about',
-        name: About,
-        component: About
-    },
-    {
         path: '/adduser',
         name: AddUser,
         component: AddUser
-    },
-    {
-        path: '/login',
-        name: Login,
-        component: Login
     },
     {
         path: '/editpage/:userId',
@@ -47,11 +32,6 @@ const routes = [
         meta:{
             requiresAuth:true
         }
-    },
-    {
-        path: '/testbootstrap',
-        name: TestBootstrap,
-        component: TestBootstrap
     },
     {
         path: '/loginpage',
